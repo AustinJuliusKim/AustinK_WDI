@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Value Versus Reference</title>
+	<script src="js/app.js" type="text/javascript"></script>
+</head>
+<body>
+
+<p id="demo" onclick ="doSomething()"> HEY CLICK ME </p>
+
+<script>
+
+function doSomething() {
+	document.getElementById("demo").style.backgroundColor = "black";
+	document.getElementById("demo").style.color = "red";
+}
+</script>
+</body>
+</html>

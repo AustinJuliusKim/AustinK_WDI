@@ -1,0 +1,10 @@
+<%= div_for comment, remote: true do  %>
+	<p>
+		<strong>
+			Posted <%= time_ago_in_words(comment.created_at)  %> ago 
+			<!-- This is a helper that will take a time stampe and put into words how long ago -->
+		</strong>
+		<br><br>
+		<%= comment.body  %>
+	</p>
+<% end %>

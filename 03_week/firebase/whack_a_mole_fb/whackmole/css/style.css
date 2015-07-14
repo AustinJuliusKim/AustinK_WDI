@@ -1,0 +1,58 @@
+body {
+	margin: auto;
+	vertical-align: top;
+	text-align: center;
+	background: url("../images/gsw-background.jpg");
+	background-position: center;
+	background-size: 30%;
+	font-family: 'Lobster', cursive;
+	cursor: url("http://downloads.totallyfreecursors.com/cursor_files/basketball.ani"), url("http://downloads.totallyfreecursors.com/thumbnails/basketball.gif"), auto;
+}
+button {
+	font-size: 50px;
+}
+h1 {
+	font-size: 120px;
+	text-decoration: underline overline;
+	color: gold;
+	border: 10px blue double;
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
+	padding: 100px;	
+	border-radius: 5px;
+}
+
+.container {
+	width: 600px;
+	height: 600px;
+	border: 3px solid white;
+	border-radius: 10%;
+	margin: 0 auto;
+	padding-top: 20px;
+
+
+
+}
+
+.hole {
+	max-width: 175px;
+	max-height: 175px;
+	width: 28%;
+	height: 28%;
+	border: 3px solid black;
+	border-radius: 50% 50%;
+	display: inline-block;
+	margin: auto;
+	vertical-align: top;
+	padding: 10px;
+	background-color: orange;
+}
+
+img {
+	max-height:168px;
+	max-width: 168px;
+	z-index: -1px;
+	border-radius: 50% 50%;
+	position: center;
+}

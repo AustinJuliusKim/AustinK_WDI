@@ -1,0 +1,21 @@
+<h1>Today's Beans!</h1>
+
+<%= form_tag(beans_path,  {method: "get"}) do %>
+
+	<%= text_field_tag(:q) %>
+	<%= submit_tag("Search") %>
+
+<% end %>
+
+<ul>
+	<%  @beans.each do |bean|  %>
+		<li>
+			<%= image_tag bean.image_url(:thumb) %>
+			<%= bean.name  %> - <%= bean.roast %>
+			<%= link_to "More info", bean_path(bean) %>
+		</li>
+
+	<% end %>	
+</ul>
+
+<%= link_to "New bean", new_bean_path %>

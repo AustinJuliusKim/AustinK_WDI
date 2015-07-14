@@ -1,0 +1,23 @@
+<h1>Add a new user</h1>
+
+
+<section>
+<%= form_for @user do |f| %>
+	<div>
+		<%= f.label :name %>	
+		<%= f.text_field :name %>
+	</div>
+
+	<div>
+		<%= f.label :email %>	
+		<%= f.text_field :email %>
+	</div>
+
+	<div>
+		<%= f.label :password %>	
+		<%= f.password_field :password %>
+	</div>
+
+	<%= f.submit "Add user" %>
+<% end %>
+</section>

@@ -1,0 +1,58 @@
+<head>
+  <title>meteor-lesson</title>
+</head>
+
+<body>
+ 
+  {{> loginButtons}}
+  <br><br>
+  <h1>Welcome to Meteor, {{#if currentUser}}{{currentUser.username}}{{/if}}!</h1>
+  
+
+  <hr>
+  <div>
+  <h3>List of Users: </h3>
+  <ul>
+  {{> users}}
+  </ul>
+</div>
+<hr>
+{{> requestedPickups}}
+
+<hr>
+
+  {{> hello}}
+  <!-- {{> myLocation}} -->
+</body>
+
+<template name="requestedPickups">
+	<form class="new-pickup">
+		<input type="text" name="user" placeholder="Input user info" value="{{#if currentUser}}{{currentUser.username}}{{/if}}">
+		<input type="text" name="note" placeholder="Input pickup note">
+		<input type="text" name="myLocation" placeholder="Input pickup location">
+		<button type="submit">Submit</button>
+	</form>
+
+	<ul>
+		{{#each pickups}}
+			<li>{{name}} - {{note}} @ {{location}}</li>
+		{{/each}}
+	</ul>
+</template>
+
+<template name="users">
+	  {{#each users}}
+	  		<li>{{username}}</li>
+	  {{/each}}
+</template>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="myLocation">
+  <button id="map">Find Me</button>
+  <p>You are here {{location}}</p>
+  <img border="0" src="//maps.googleapis.com/maps/api/staticmap?markers={{location}}&amp;zoom=10&amp;size=400x400" alt="Greenwich, England">
+</template>

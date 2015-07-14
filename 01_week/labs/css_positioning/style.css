@@ -1,0 +1,45 @@
+#block-element {
+	width: 600px;
+	border: 1px solid blue;
+
+
+}
+
+
+
+h1 {
+	border: 1px solid red;
+	width: 450px;
+
+
+}
+
+h2 {
+	border: 1px solid black;
+}
+
+span {
+	border: 1px solid purple;
+	width: 600px;
+	/*Cannot apply width property*/
+
+}
+
+img {
+	width: 100px;
+	height: 100px;	
+}
+
+
+.example {
+	display: inline-block;
+	width: 200px;
+	height:200px;
+	margin: 0 auto;
+
+
+}
+
+body {
+	margin: 0 auto;
+}

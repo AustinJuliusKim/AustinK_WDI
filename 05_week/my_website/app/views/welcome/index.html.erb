@@ -1,0 +1,14 @@
+<h1><%= @my_name %> </h1>
+
+
+<p>The languages I know are: 
+<%= @my_languages.join(", ") %> </p>
+
+<h2>Experience: </h2>
+<div>=======</div>
+<%# Let's print the jobs I've had using string interpolation %>
+<ul>
+	<% @my_experience.each do |job| %>
+		<li><%= "#{job[:position]} at #{job[:location]}" %></li>
+	<% end %>
+</ul>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movies</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+     <%= csrf_meta_tags %>
+ <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+<body>
+<svg></svg>
+
+<%= yield %>
+<script>
+
+
+	var svg = d3.select("svg");
+	svg.attr({width: 600, height: 400})
+	
+	d3.json("http://localhost:3000/movies.json", function(data){ console.log(data)
+		svg.selectAll("rect")
+	      .data(data)
+	      .enter()
+	      .append("rect")
+	      .attr({x: function(d,i){return i * 50},
+	      	y: function(d,i){ return 400 - d.rating * 20} ,
+	      	width: 20,
+	      	height: function(d,i){ return d.rating * 20},
+	      	fill: 'tomato',
+	      	stroke: 'black'
+	      })
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<div class="jumbotron" ng-init="eggsCtrl.getUsersIndex()">
+	<h1 class="text-center">An Eggs App</h1>
+</div>
+
+<div>
+	<button class="btn btn-primary"><a href="#/new">New User</a></button>
+</div>
+
+<div class>
+	<ul>
+		<li ng-repeat="user in eggsCtrl.jsonUsers">{{ user.company_name }} | {{ user.address }}
+			<div>
+				<button class="btn btn-primary">Show</button>
+				<button class="btn btn-primary">Edit</button>
+				<button class="btn btn-primary">Delete</button>
+			</div>
+		</li>
+	</ul>
+</div>

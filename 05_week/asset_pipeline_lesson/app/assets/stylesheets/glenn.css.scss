@@ -1,0 +1,19 @@
+$color: red;
+@mixin code-partier($size){
+	margin: $size;
+	padding: $size;
+	color: white;
+}
+.glenn {
+	background-color: $color;
+	p{
+		@include code-partier(20px);	
+	}
+}
+
+.jimmy {
+	background-color: $color;
+	p{
+		@include code-partier(20px);
+	}
+}

@@ -1,0 +1,26 @@
+#rotate {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	transform: rotate(30deg);
+}
+
+#scale {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	transform: scaleX(1.2) scaleY(0.5);
+}
+
+#skew {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	transform: skewX(30deg);
+}
+
+#translate {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}

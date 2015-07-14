@@ -1,0 +1,4 @@
+var newComment = $('<%= escape_javascript(render partial: @comment) %> ');
+newComment.hide();
+$('#comments').append(newComment);
+newComment.show('fast');

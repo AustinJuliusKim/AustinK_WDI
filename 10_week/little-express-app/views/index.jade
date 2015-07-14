@@ -1,0 +1,11 @@
+h1 Welcome to my app
+
+div some stuff in here
+div The food that #{name.toUpperCase()} likes
+ul
+	each food in foods
+		li=food
+
+form(method="POST")
+	input(type="text" name="new-food")
+	button(type="submit") Add New Food

@@ -1,0 +1,9 @@
+<h1>All the products available are the following:</h1>
+
+<ul>
+	<li><% @products.each do |product| %>
+		<%= "A #{product.title} for sale, only $ #{product.price}" %>
+		<% end %>
+	</li>
+</ul>
+

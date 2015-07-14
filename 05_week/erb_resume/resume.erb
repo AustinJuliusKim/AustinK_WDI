@@ -1,0 +1,15 @@
+My name is <%= my_name %> and I am a computer programmer.
+
+The languages I know are: 
+<%= my_languages.join(", ") %>
+
+Experience:
+=======
+<%# Let's print the jobs I've had using string interpolation %>
+<% my_experience.each do |job| %>
+<%= "-#{job[:position]} at #{job[:location]}" %>
+<% end %>
+
+
+
+

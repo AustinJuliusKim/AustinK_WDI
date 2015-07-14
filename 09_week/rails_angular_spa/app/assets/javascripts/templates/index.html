@@ -1,0 +1,17 @@
+<div class="jumbotron" ng-init="dogsCtrl.getDogIndex()">
+  <h1 class="text-center">A Dog App</h1>
+</div>
+
+<a href="#/new"><button class="btn btn-info">New Dog</button></a>
+
+<section>
+  <ul>
+    <li ng-repeat="dog in dogsCtrl.jsonDogs">{{dog.name}} - {{dog.age}}
+    <div>
+      <button class="btn btn-primary"><a style="color:white" href="#/dogs/{{dog.id}}">Show</a></button>
+      <button class="btn btn-success"><a style="color:white" href="#/dogs/{{dog.id}}/edit">Edit</a></button>
+      <button class="btn btn-danger" ng-click="dogsCtrl.deleteDog(dog.id, $index)">Delete</button>
+    </div>
+    </li>
+  </ul>
+</section>

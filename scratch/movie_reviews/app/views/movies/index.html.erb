@@ -1,0 +1,15 @@
+<h1>This is the list of movies!</h1>
+
+<ul>
+	<% @movies.each do |movie| %>
+		<li>
+			<p><strong> <%= movie.title %></strong> Year Released: <%= movie.year %></p>
+
+
+			<%= link_to "Leave a review!", movie_path(movie) %>
+		</li>
+	<% end %>
+</ul>
+
+<br>
+<%= link_to "Add a movie to review!", new_movie_path%>

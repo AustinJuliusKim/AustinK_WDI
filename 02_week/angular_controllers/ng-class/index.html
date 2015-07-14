@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <title>ng-class Lesson</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+
+  <body>
+  {{ 2 + 2 }}
+<!--     
+    Demonstrate using the string syntax. -->
+
+    <p ng-class="style">Using String Syntax</p>
+      <input type="text" placeholder="bold strike red" ng-model="style">
+    <!-- The magic is going to happen here! -->
+    <hr>
+
+    <!-- Demonstrate using the array syntax. -->
+
+    <p ng-class="[style1, style2, style3]">Using Array Syntax</p>
+      <input ng-model="style1" placeholder="bold strike red">
+      <input ng-model="style2" placeholder="bold strike red">
+      <input ng-model="style3" placeholder="bold strike red">
+    <!-- Some more magic is gonna happen here! -->
+    <hr>
+
+    <!-- Demonstrate using the object syntax -->
+    <p >Using Array Syntax</p>
+      <p ng-class="{bold:important, strike:deleted, red:error}">Example using an Object</p>
+      <input ng-model="deleted" type="checkbox"> DELETED -> status of this ng-model is {{deleted}}<br>
+      <input ng-model="important" type="checkbox"> MARK IMPORTANT -> status of this ng-model is {{important}}<br>
+      <input ng-model="error" type="checkbox"> ERROR -> status of this ng-model is {{error}}
+      <hr> 
+
+  </body>
+</html>

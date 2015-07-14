@@ -1,0 +1,22 @@
+<div class="container-fluid">
+	<div class="masthead">
+	
+
+	<h1>Users</h1>
+	</div>
+
+	<ul>
+		<% @users.each do |user| %>
+			<li><%= user.name %></li>
+		<% end %>
+	</ul>
+
+
+<% if logged_in? %>
+		Logged in as : <%= current_user.name %>
+		<%= link_to 'Log Out', logout_path, method: :delete %>
+	<% else %>
+		<%= link_to 'Log in', login_path, class: 'btn btn-primary' %>
+	<% end %>
+</div>
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="container">
+	<div class="square">1</div>
+	<div class="square">2</div>
+	<div class="square">3</div>
+	<div class="square">4</div>
+	<div class="square">5</div>
+	<div class="square">6</div>
+	<div class="square">7</div>
+	<div class="square">8</div>
+	<div class="square">9</div>
+</div>
+<script>
+	console.clear();
+	var dataset = [2, 3, 5, 8, 9];
+	// var i = 0
+	// while (i < dataset.length){
+	// 	console.log(dataset[i]);
+	// 	i = i + 1
+	// }
+
+
+	function each(collection, fn){
+		var i = 0
+
+		while(i < collection.length){
+			fn(collection[i]);
+			i = i + 1;
+		}
+	
+	}
+
+	each(dataset, function(el){console.log(el)});
+//////////////////////////////////////////////////////////////////////////
+	function map(collection, fn){
+		var i = 0
+		var array = [ ];
+		while(i < collection.length){
+			// x[i] = fn(collection[i]);
+			// i = i + 1;
+
+			array.push(fn(collection[i]))
+			i = i + 1
+		}
+		return array
+	};
+//////////////////////////////////////////////////////////////////////////
+	var myDoubleSet = map(dataset, function(el){return 2*el});
+
+	var mySquares = document.querySelectorAll(".square");
+
+
+
+	function filter(collection, fn){
+		var i = 0;
+		var array = [];
+		while ( i < collection.length) {
+			console.log(fn(collection[i]));
+			if (fn(collection[i])) {
+			 array.push(collection[i]);
+			}
+			i = i + 1;
+		}
+		return array;
+	}
+	myCollection = [1,5,6,7,8,9]
+	var myFiltered =	filter(myCollection, function(el) { return el < 5 }); // ]2,3]
+
+
+var developers = [
+    { name: "Joe", age: 23, xp: 5 },
+    { name: "Sue", age: 28, xp: 2 },
+    { name: "Jon", age: 32, xp: 7 },
+    { name: "Bob", age: 24, xp: 10 }
+  ];
+
+each(developers, function(developer){ console.log(developer.name + " is " + developer.age + " and has " + developer.xp  + " xp points.")})
+
+var oldDev = filter(developers, function(dev){ return  dev.age > 27 })
+var qualDev = filter(developers, function(dev){ return dev.xp > 5})
+var inexDev = filter(developers, function(dev){ if (dev.xp <= 5) return dev.name})
+</script>
+</body>
+</html>

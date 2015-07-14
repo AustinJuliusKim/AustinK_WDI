@@ -1,0 +1,38 @@
+h1 {
+	color: red;
+	border: solid gray 2px;
+	margin: 20 0 0 20;
+	border-spacing: 10px 10px 10px 10px
+
+
+	}
+h2 {
+	color: blue;
+
+}
+
+.mammal {
+	color: red;
+	font-weight: bold;
+
+}
+.bird {
+	color: blue;
+	text-decoration: underline;
+}
+.fish {
+	color: orange;
+	font-style: italic;
+}
+
+#mouse {
+	background-color:purple;
+}
+
+.blue {
+	color: blue;
+}
+
+#green {
+	color: green;
+}

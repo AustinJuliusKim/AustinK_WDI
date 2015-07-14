@@ -1,0 +1,127 @@
+/*General Styling*/
+html {
+	max-width: 950px;
+}
+body {
+	background-color: #eee;
+}
+nav {
+	padding: 10px;
+}
+
+
+
+
+
+/*End General Styling*/
+
+/*Nav Bar styling*/
+
+
+header {	
+	background: black;
+	border: 1px black solid;
+}
+
+body > header nav ul li a {
+	color: white;
+	text-decoration: none;
+
+}
+
+
+header > nav ul li {
+	display: inline-block;
+	height: 50px;
+	padding: 20px 20px 0px 20px;
+}
+
+/*End Nav Bar styling*/
+
+/*Title Bar styling*/
+
+.title {
+	border: 1px black solid;
+}
+.right {
+	position: relative;
+	left: 300px;
+	padding: 0px 5px;
+}
+
+/*End Title Bar styling*/
+
+
+
+
+
+/*Photo banner styling*/
+.banner {
+	width: 950px;
+	
+}
+.banner img {
+	width: 950px;
+	box-shadow: 0 30px 40px -10px black;
+}
+
+/*End Photo Banner styling*/
+
+
+
+
+/*Middle styling*/
+.home {
+	border: 1px solid black;
+	display: inline-block;
+	padding: 1px;
+	margin: 10px;
+	max-width: 280px;
+}
+
+/*.home > img {
+	padding: 10px;
+}*/
+.home > p {
+	text-align: justify;
+}
+/*End middle styling*/
+
+
+
+/*3boxes styling*/
+footer {
+	max-width: 1000px;
+	border: 1px black solid;
+}
+#Blogroll{
+	width: 200px;
+	padding: 0 20px 0px 50px;
+	position: relative;
+}
+#TextWidget {
+	width: 200px;
+	padding:0px 100px 20px 100px;
+	position: relative;
+	top: 10px;
+}
+#MetaWidget {
+	max-width: 200px;
+	padding: 10px 20px 50px 100px;
+	position: relative;
+	top: -65px;
+}
+
+.footer {
+	display:inline-block;
+	height:200px;
+
+}
+
+#copyright {
+	float: left;
+}
+#theme {
+	float: right;
+}
+/*End 3boxes styling*/

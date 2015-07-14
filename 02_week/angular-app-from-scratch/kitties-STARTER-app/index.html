@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html ng-app="saveKitties">
+	<head>
+		<title>Save All The Kitties!</title>
+		<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+	{{ 2 + 2 }}
+	<div ng-controller="KittiesController as cats" id="container">
+		
+		<div class="left-container">
+		<h1>Kitties for Adoption</h1>
+			<div ng-repeat="c in cats.listOfKitties | filter: false" class="dashed">
+				<h2>My name is {{ c.catName }}</h2>
+				<p>I am {{ c.monthsOld}} months old</p>
+				<p>I am {{ c.gender }}</p>
+				<img ng-src=" {{ c.image }}">
+				<p>Adopt?<input type="checkbox" ng-model="c.adopted"></p>
+
+			</div>
+		
+		</div>
+		
+		<div class="right-container">
+		<h1>At their forever homes</h1>
+			
+			<div ng-repeat="c in cats.listOfKitties | filter: true" class="dashed">
+				<h2>My name is {{ c.catName }}</h2>
+				<p>I am {{ c.monthsOld}} months old</p>
+				<p>I am {{ c.gender }}</p>
+				<img ng-src=" {{ c.image }}">
+
+			</div>
+				
+			
+		</div>
+	</div>
+
+
+
+
+
+		
+		<script src="js/angular.min.js"type="text/javascript" charset="utf-8"></script>
+		<script src="js/main.js" type="text/javascript"></script>
+		<script src="js/KittiesController.js" type="text/javascript"></script>		
+	</body>
+</html>

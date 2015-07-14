@@ -1,0 +1,28 @@
+<div class="container-fluid">
+<div class="masthead">
+	<h1>Log in</h1>
+	<hr>
+</div>	
+<form class="form-inline">	
+	<%= form_for :login do |f| %>
+		<div class="form-group">
+			<%= f.label :email %>
+			<%= f.text_field :email  %>
+		</div>
+		<div class="form-group">
+			<%= f.label :password %>
+			<%= f.password_field :password %>
+		</div>
+	
+	
+		<div class="form-group">
+			<%= f.submit "Log In", class: 'btn btn-info'  %>
+		</div>
+	
+		<div class="form-group">
+			<%= link_to "Back to list!", users_path, class: 'btn btn-primary' %>
+		</div>
+
+	<% end %>
+</form>
+</div>

@@ -1,0 +1,12 @@
+@mixin image-resize($size) {
+	width: $size;
+	height: $size;
+}
+
+.img-circle {
+	@include image-resize(200px);
+
+	margin: 10px;
+	border: 1px black solid;
+}
+

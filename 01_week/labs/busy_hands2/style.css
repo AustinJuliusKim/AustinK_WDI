@@ -1,0 +1,13 @@
+body {
+	height: 1200px;
+	width: 900px;
+	background: -webkit-linear-gradient(top, #eee, #eee 40%, white 30%, white);
+	margin: 0px;
+}
+
+header {
+	height: 200px;
+	width: auto;
+	background: black; 
+	z-index: 1px;
+}
